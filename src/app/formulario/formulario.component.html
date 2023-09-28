@@ -1,0 +1,14 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+    </div>
+    
+    <div>
+        <button type="submit" [disabled]="!formulario.valid">Enviar</button>
+    </div>
+</form>
